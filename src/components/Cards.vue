@@ -1,11 +1,10 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="cards-wrapper col-md-12">
+  <b-container fluid>
+    <b-row>
+      <b-col cols="12" class="cards-wrapper">
         <div  class="sorting">
           <a href="#"><img alt="" src="../assets/images/sort-icon.png"> Newest to Oldest</a>
         </div>
-
         <div class="each-card not-started">
           <font-awesome-icon icon="cog" />
           <div class="card-header">
@@ -100,9 +99,9 @@
           <font-awesome-icon icon="plus-circle" />
           <h4>Add New Project</h4>
         </a>
-      </div>
-    </div>
-  </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
