@@ -1,0 +1,20 @@
+@import 'variables.scss';
+@import 'header.scss';
+@import 'cards.scss';
+@import 'modal.scss';
+
+
+
+#app {
+  font-family: $roboto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $exo;
+  font-weight: $w-extrabold;
+}
+
+button {
+  font-family: $exo;
+  font-weight: $w-semibold;
+}

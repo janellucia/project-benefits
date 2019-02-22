@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+//--------------------------------------------
+// FONTS
+//--------------------------------------------
+
+$exo: 'Exo', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+//--------------------------------------------
+// FONT WEIGHTS
+//--------------------------------------------
+
+$w-thin: 100;
+$w-extralight: 200;
+$w-light: 300;
+$w-regular: 400;
+$w-medium: 500;
+$w-semibold: 600;
+$w-bold: 700;
+$w-extrabold: 800;
+$w-black: 900;
+
+//--------------------------------------------
+// PAGE BREAKS
+//--------------------------------------------
+
+$screen-xxxs-max: 374px;
+$screen-xxs-max: 480px;
+$screen-xs-min: 481px;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 979px;
+$screen-md-min: 980px;
+$screen-mobile-tablet: 991px;
+$screen-mobile-tablet-max: 1024px;
+$screen-mobile-tablet-min: 1025px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+$screen-lg-bench: 1240px;
+$screen-lg-mid: 1620px;
+$screen-lg-max: 1920px;
+$screen-xl-min: 1921px;
+
+//--------------------------------------------
+// COLOURS
+//--------------------------------------------
+
+$pale-blue: #7cadd4;
+$light-blue: #5191c5;
+$bright-blue: #206caf;
+$dark-blue: #1e5e92;
+$deep-blue: #16476e;
+
+$pale-grey: #c9c9c9;
+$light-grey: #a2a2a2;
+$medium-grey: #858585;
+$dark-grey: #717171;
+$deep-grey: #4a4a4a;
+
+$purple: #532c85;
+$red: #b3252e;
+$orange: #f06e22;
+$yellow: #f6bc2e;
+$green: #27943f;
