@@ -4,7 +4,7 @@
       <b-row>
         <b-col cols="6">
           <h2>My Project Dashboard</h2>
-          <button class="add-project-button" v-b-modal.modalPrevent>Add Project</button>
+          <button class="add-project-button" v-b-modal.modalAddProject>Add Project</button>
         </b-col>
         <b-col cols="6">
           <p>This Project Dashboard enables you to collect feedback to ensure your key projects are on track and to measure and communicate success.</p>

@@ -3,6 +3,7 @@
     <Header/>
     <Cards/>
     <Modal/>
+    <Test/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from './components/Header.vue'
 import Cards from './components/Cards.vue'
 import Modal from './components/Modal.vue'
+import Test from './components/Test.vue'
 
 export default {
   name: 'app',

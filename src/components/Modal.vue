@@ -1,21 +1,9 @@
 <template>
   <div>
-    <button v-b-modal.modalPrevent>test modal</button>
-
-    <!-- Main UI -->
-    <div class="mt-3 mb-3">
-      Submitted Names:
-      <ul>
-        <li v-for="n in names" v-bind:key="n.id">{{ n }}</li>
-      </ul>
-      <div>
-        <p v-for="p in projectNames" v-bind:key="p.id">{{ p }}</p>
-      </div>
-    </div>
 
     <!-- Modal Component -->
     <b-modal
-      id="modalPrevent"
+      id="modalAddProject"
       ref="modal"
       title="Add New Project"
       ok-title="Add Project"
@@ -24,6 +12,7 @@
       @ok="handleOk"
       @shown="clearName"
     >
+
       <form @submit.stop.prevent="handleSubmit">
 
         <b-form-group id="projectNameGroup" label="Project Name" label-for="projectName" v-modal="projectName">

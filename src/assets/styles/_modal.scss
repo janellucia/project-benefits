@@ -8,35 +8,66 @@
   background-color: rgba(0, 0, 0, .5);
   display: table;
   transition: opacity .3s ease;
+
 }
 
+.modal-content {
+  border-radius: 0;
 
-.modal-footer {
-  flex-direction: row-reverse;
-
-  .btn-add-project, .btn-cancel {
-    width: 170px;
-    padding: 10px 0;
-    outline: none;
-    border: none;
-    border-radius: 0;
-    margin-right: 10px;
-    color: white;
-  }
+  .modal-header {
+    border-bottom: none;
+    padding: 40px 40px 20px;
   
-  .btn-add-project {
-    background: lighten(green, 5%);
-
-    &:focus, &:hover, &:active, &:visited {
-      background: darken($green, 5%);
+    .modal-title {
+      color: $bright-blue;
+      font-family: $montserrat;
+      font-size: 1.8rem;
     }
   }
 
-  .btn-cancel {
-    background: $light-grey;
+  .modal-body {
+    padding: 0 40px;
 
-    &:focus, &:hover, &:active, &:visited {
-      background: $medium-grey;
+    label {
+      margin-bottom: 7px;
+      font-size: 0.9rem;
+      color: $dark-grey;
+    }
+
+    input, textarea, select {
+      border-radius: 0;
+    }
+  }
+
+  .modal-footer {
+    flex-direction: row-reverse;
+    border-top: none;
+    padding: 20px 40px 40px;
+  
+    .btn-add-project, .btn-cancel {
+      width: 170px;
+      padding: 10px 0;
+      outline: none;
+      border: none;
+      border-radius: 0;
+      margin-right: 10px;
+      color: white;
+    }
+    
+    .btn-add-project {
+      background: lighten(green, 5%);
+  
+      &:focus, &:hover, &:active, &:visited {
+        background: darken($green, 5%);
+      }
+    }
+  
+    .btn-cancel {
+      background: $light-grey;
+  
+      &:focus, &:hover, &:active, &:visited {
+        background: $medium-grey;
+      }
     }
   }
 }

@@ -33,6 +33,7 @@
             <div>
               <h4>Project Benefits</h4>
               <p class="benefit">Makes internal processes more efficient/effective</p>
+              <p class="benefit">Provides new internal capabilities</p>
             </div>
           </div>
           <div class="card-footer">
@@ -95,7 +96,7 @@
           <div class="status-bar"></div>
         </div>
 
-        <button v-b-modal.modalPrevent class="add-project">
+        <button v-b-modal.modalAddProject class="add-project">
           <font-awesome-icon icon="plus-circle" />
           <h4>Add New Project</h4>
         </button>
