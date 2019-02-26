@@ -23,6 +23,19 @@
       font-family: $montserrat;
       font-size: 1.8rem;
     }
+
+    .close {
+      font-weight: $w-extralight;
+      font-family: $roboto;
+      font-size: 2.4rem;
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+
   }
 
   .modal-body {
@@ -36,6 +49,17 @@
 
     input, textarea, select {
       border-radius: 0;
+    }
+
+    select {
+      // color: $light-grey;
+      // font-weight: $w-light;
+      option {
+          color: #000;
+      }
+      option:first-child {
+          color: #ccc;
+      }
     }
   }
 

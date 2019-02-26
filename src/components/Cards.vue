@@ -6,7 +6,7 @@
           <a href="#"><img alt="" src="../assets/images/sort-icon.png"> Newest to Oldest</a>
         </div>
         <div class="each-card not-started">
-          <font-awesome-icon icon="cog" />
+          <button class="settings"></button>
           <div class="card-header">
             <h3 class="project-name">Application Upgrade</h3>
           </div>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="each-card in-progress">
-          <font-awesome-icon icon="cog" />
+          <button class="settings"></button>
           <div class="card-header">
             <h3 class="project-name">Risk Analysis</h3>
           </div>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="each-card closed">
-          <font-awesome-icon icon="cog" />
+          <button class="settings"></button>
           <div class="card-header">
             <h3 class="project-name">Security Upgrade</h3>
           </div>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="each-card not-started">
-          <font-awesome-icon icon="cog" />
+          <button class="settings"></button>
           <div class="card-header">
             <h3 class="project-name">Upgrade DRP</h3>
           </div>
@@ -79,7 +79,7 @@
         </div>
 
         <div class="each-card closed">
-          <font-awesome-icon icon="cog" />
+          <button class="settings"></button>
           <div class="card-header">
             <h3 class="project-name">Windows Upgrade</h3>
           </div>
