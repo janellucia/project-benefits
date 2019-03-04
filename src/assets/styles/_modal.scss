@@ -70,16 +70,12 @@
   
     .btn-add-project, .btn-cancel {
       width: 170px;
-      padding: 10px 0;
-      outline: none;
-      border: none;
-      border-radius: 0;
       margin-right: 10px;
       color: white;
     }
     
     .btn-add-project {
-      background: lighten(green, 5%);
+      background: lighten($green, 5%);
   
       &:focus, &:hover, &:active, &:visited {
         background: darken($green, 5%);

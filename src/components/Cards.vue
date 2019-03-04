@@ -6,7 +6,7 @@
           <a href="#"><img alt="" src="../assets/images/sort-icon.png"> Newest to Oldest</a>
         </div>
         <div class="each-card not-started">
-          <button class="settings"></button>
+          <button v-b-modal.modalNotStarted class="settings" aria-label="settings"></button>
           <div class="card-header">
             <h3 class="project-name">Application Upgrade</h3>
           </div>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="each-card in-progress">
-          <button class="settings"></button>
+          <button v-b-toggle.inProgress class="settings"></button>
           <div class="card-header">
             <h3 class="project-name">Risk Analysis</h3>
           </div>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="each-card not-started">
-          <button class="settings"></button>
+          <button v-b-modal.modalNotStarted class="settings" aria-label="settings"></button>
           <div class="card-header">
             <h3 class="project-name">Upgrade DRP</h3>
           </div>

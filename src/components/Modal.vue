@@ -3,7 +3,7 @@
 
     <!-- Main UI -->
     <div class="each-card not-started">
-      <button class="settings"></button>
+      <button v-b-modal.modalNotStarted class="settings" aria-label="settings"></button>
       <div class="card-header">
         <h3 v-for="n in names" v-bind:key="n.id" class="project-name">{{ n }}</h3>
       </div>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Modal Component -->
-    <b-modal id="modalAddProject" ref="modal" title="Add New Project" ok-title="Add Project" ok-variant="add-project" cancel-variant="cancel" @ok="handleOk" @shown="clearName" >
+    <b-modal id="modalAddProject" ref="modal" title="Add New Project" ok-title="Add Project" ok-variant="add-project" cancel-variant="cancel" @ok="handleOk" @shown="clearName">
       <form @submit.stop.prevent="handleSubmit">
 
         <b-form-group id="projectNameGroup" label="Project Name" label-for="projectName">
@@ -37,7 +37,7 @@
           <b-form-select id="primaryBenefits" :options="options" v-model="primaryBenefit" />
         </b-form-group>
 
-        <b-form-group id="secondaryBenefitsGroup" label="Secondary Project Benefit" label-for="secondaryBenefits">
+        <b-form-group id="secondaryBenefitsGroup" label="Secondary Project Benefit (Optional)" label-for="secondaryBenefits">
           <b-form-select id="secondaryBenefits" :options="options" v-model="secondaryBenefit" />
         </b-form-group>
 
@@ -68,6 +68,7 @@
         this.description = '',
         this.primaryBenefit = '',
         this.secondaryBenefit = ''
+        // focusMyElement
       },
       handleOk(evt) {
         // Prevent modal from closing

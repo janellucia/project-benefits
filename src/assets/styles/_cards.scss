@@ -24,13 +24,19 @@
     margin: 1%;
     border-radius: 0;
 
+    @media screen and (max-width: $screen-mobile-tablet) {
+      width: 48%;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+
   }
 
   .each-card {
-    width: 31%;
-    margin: 1%;
     border-radius: 0;
-    box-shadow: 5px 10px 30px rgba(black, 0.1);
+    box-shadow: 5px 10px 50px rgba(black, 0.2);
     transition: all 0.5s;
     position: relative;
     padding-bottom: 40px;
@@ -39,7 +45,7 @@
       box-shadow: 5px 10px 30px rgba(black, 0.3);
     }
 
-    .settings {
+    .when-opened, .when-closed, .settings {
       position: absolute;
       top: 15px;
       right: 15px;
@@ -48,20 +54,21 @@
       border: none;
       background: transparent;
       opacity: .5;
-
-      &::after {
-        font-family: FontAwesome;
-        content: '\f013';
-        font-size: 1.3rem;
-        position: absolute;
-        top: 7px;
-        right: 13px;
-        z-index: 2;
-      }
+      font-size: 1.3rem;
 
       &:hover, &:focus {
         opacity: 1;
       }
+
+    }
+    .settings, .when-closed {
+
+      &::after {
+        font-family: FontAwesome;
+        content: '\f013';
+        z-index: 2;
+      }
+
     }
 
     .card-header, .card-body, .card-footer {
@@ -73,7 +80,12 @@
         font-weight: $w-extrabold;
         color: $dark-grey;
         margin-top: 30px;
-        font-size: 1.625rem
+        font-size: 1.625rem;
+        margin: 0;
+        margin-bottom: 30px;
+        .trash {
+          display: none;
+        }
       }
 
       .description {
@@ -83,11 +95,16 @@
         overflow: hidden;
       }
 
-      h4 {
+      .benefit-title, .primary-title, .secondary-title {
         color: $light-grey;
         font-size: 0.9rem;
         margin-bottom: 5px;
       }
+      
+      .primary-title, .secondary-title {
+        display: none;
+      }
+
       .benefit {
         font-weight: $w-medium;
         margin: 0;
@@ -141,6 +158,10 @@
     background: transparent;
     border: none;
     outline: none;
+
+    @media screen and (max-width: $screen-xs-max) {
+      height: 200px;;
+    }
 
     .fa-plus-circle {
       font-size: 5rem;

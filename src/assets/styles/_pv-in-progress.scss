@@ -1,0 +1,340 @@
+
+
+//transform the settings 'cog' in 'x' to close settings
+.collapsed > .when-opened, :not(.collapsed) > .when-closed {
+  display: none;
+}
+
+//styles for In-progress & Closed Project View Cards
+.fullWidth {
+
+  .each-card {
+    width: 98%;
+
+    .close {
+      font-family: $montserrat;
+      font-weight: $w-extralight;
+      font-size: 2.5rem;
+      margin-right: 40px;
+    }
+
+    .trash {
+      position: relative;
+
+      &:before {
+        font-family: FontAwesome;
+        content: '\f014';
+        font-size: 1.3rem;
+        position: absolute;
+        top: 5px;
+        right: 0px;
+        z-index: 2;
+        color: $bright-blue;
+      }
+    }
+
+    //rearrange main card info into project view styles
+    .card-body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 40px;
+
+      .project-name {
+        font-size: 2.4rem;
+        width: 100%;
+        font-family: $montserrat;
+        margin: 30px 0;
+        .trash {
+          display: inline;
+        }
+      }
+
+      .description-view, .benefit-view {
+        width: 48%;
+
+        .benefit-title {
+          display: none;
+        }
+        .primary-title, .secondary-title {
+          display: block;
+        }
+
+        .benefit {
+          font-weight: $w-light;
+          margin: 0;
+        }
+      }
+    }
+
+    .card-footer, .status-bar {
+      display: none;
+    }
+
+    .pv-body {
+      padding: 40px 0;
+      position: relative;
+    
+      .pv-status-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        width: 97.5%;
+        display: block;
+        height: 10px;
+        background: linear-gradient(to right, lighten($bright-blue, 20%), $bright-blue);
+        margin: 0 15px;
+      }
+
+      .results-header {
+        margin-bottom: 30px;
+      
+        h4 {
+          font-family: $montserrat;
+          color: $bright-blue;
+          display: inline-block;
+          padding: 10px 0;
+          margin: 0;
+        }
+      
+        .close-survey-button {
+          background: lighten($bright-blue, 5%);
+          color: white;
+          padding: 10px 20px;
+          margin-right: 40px;
+      
+          &:hover, &:focus {
+            background: darken($bright-blue, 5%);
+          }
+        }
+      }
+  
+      .open-date-wrap {
+        p {
+          margin: 0;
+        }
+        h5 {
+          font-family: $montserrat;
+          font-weight: $w-bold;
+          color: $dark-grey;
+        }
+      }
+  
+      .copy-link-label {
+        span {
+          font-weight: $w-semibold;
+        }
+      }
+  
+      .copy-link-wrap {
+        border: 1px solid $light-grey;
+        input {
+          border: none;
+          padding: 10px;
+        }
+        button {
+          background: lighten($pale-grey, 15%);
+          color: $medium-grey;
+          position: relative;
+          width: auto;
+          padding: 10px 15px 10px 35px;
+          margin: 0;
+          line-height: 1;
+          font-size: 0.9rem;
+          font-weight: $w-medium;
+      
+          &:before {
+            font-family: FontAwesome;
+            content: '\f0c1';
+            font-size: 1.1rem;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 2;
+            color: $medium-grey;
+          }
+  
+          &:hover, &:focus {
+            background: lighten($pale-grey, 10%);
+          }
+        }
+      }
+    }
+
+    .stats {
+      background: linear-gradient(lighten($pale-grey, 15%),  white );
+      text-align: center;
+    
+      h5, h6 {
+        padding: 40px 0;
+        width: 100%;
+      }
+    
+      h5 {
+        font-family: $montserrat;
+        font-weight: $w-extralight;
+      }
+    
+      h6 {
+        font-size: 1.5rem;
+      }
+    
+      .completed {
+        margin-bottom: 30px;
+      }
+    
+      .number {
+        margin-bottom: 0;
+        font-family: $exo;
+        font-weight: $w-semibold;
+        line-height: 1;
+      }
+    
+    
+      .completed .number {
+        font-size: 4rem;
+      }
+    
+      .partial .number {
+        font-size: 2.7rem;
+      }
+    
+      .completion-stats {
+        background: white;
+        box-shadow: 0px -31px 50px rgba(black, 0.02);
+    
+        h5 {
+          font-size: 1.75rem;
+        }
+    
+        .number, h6 {
+          color: $green;
+        }
+    
+      }
+      .by-role {
+        .number, h6 {
+          color: $bright-blue;
+        }
+      }
+    }
+
+    .btn {
+      border-radius: 0;
+      color: white;
+      width: 220px;
+      margin: 40px 15px 40px 0;
+    }
+
+    .btn-download{
+      background: lighten($bright-blue, 5%);
+      position: relative;
+      padding-left: 15px;
+
+      &:before {
+        font-family: FontAwesome;
+        content: '\f019';
+        font-size: 1.3rem;
+        position: absolute;
+        top: 7px;
+        left: 25px;
+        z-index: 2;
+        color: white;
+      }
+    
+      &:focus, &:hover{
+        background: lighten($bright-blue, 10%);
+        color: white;
+
+        &:before {
+          animation: bounceY 500ms infinite alternate;
+        }
+      }
+    }
+
+    .btn-book-call, .btn-cancel {
+      background: $light-grey;
+    
+      &:focus, &:hover {
+        background: lighten($light-grey, 5%);
+        color: white;
+      }
+    }
+  }
+
+  .closed {
+
+    .pv-body {
+      .pv-status-bar {
+        background: linear-gradient(to right, lighten($green, 20%), $green);
+      }
+
+      .results-header {
+        h4 {
+          color: $dark-grey;
+        }
+      }
+    }
+  }
+
+  .not-started {
+
+    .pv-body {
+      .pv-status-bar {
+        background: linear-gradient(to right, lighten($yellow, 20%), $yellow);
+      }
+
+      .results-header {
+        h4 {
+          color: $dark-grey;
+        }
+      }
+    }
+
+
+    .btn-launch {
+      background: lighten($green, 5%);
+      position: relative;
+      padding-left: 0;
+    
+      &:focus, &:hover{
+        background: lighten($green, 10%);
+        color: white;
+
+        &:before {
+          animation: bounceY 500ms infinite alternate;
+        }
+      }
+    }
+
+    .question-wrap {
+    }
+    
+    .show-hide-questions {
+      // border-top: 1px solid $deep-grey;
+      color: $dark-grey;
+      width: 100%;
+      background: white;
+      position: relative;
+
+      &:before, &:after {
+        content: '';
+        background: $deep-grey;
+        height: 1px;
+        width: 40%;
+        position: absolute;
+        top: 20px;
+      }
+      
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
+}

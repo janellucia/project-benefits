@@ -64,3 +64,41 @@ $red: #b3252e;
 $orange: #f06e22;
 $yellow: #f6bc2e;
 $green: #27943f;
+
+//--------------------------------------------
+// KEYFRAME ANIMATIONS
+//--------------------------------------------
+
+@keyframes bounceY {
+  0% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes bounceX {
+  0% {
+    transform: translateX(-2px);
+  }
+
+  100% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
