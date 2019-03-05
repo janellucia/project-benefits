@@ -76,7 +76,7 @@
       background: transparent;
       padding: 10px 30px;
 
-      h3 {
+      h3, #projectName {
         font-weight: $w-extrabold;
         color: $dark-grey;
         margin-top: 30px;
@@ -92,7 +92,6 @@
         line-height: 1.2;
         margin-bottom: 24px;
         width: 100%;
-        overflow: hidden;
       }
 
       .benefit-title, .primary-title, .secondary-title {
@@ -100,7 +99,7 @@
         font-size: 0.9rem;
         margin-bottom: 5px;
       }
-      
+
       .primary-title, .secondary-title {
         display: none;
       }
@@ -129,11 +128,51 @@
   }
 
   .not-started {
+
+    label {
+      display: none !important;
+    }
+    input[disabled], textarea[disabled], select[disabled] {
+      background: white !important;
+      border: none;
+      padding: 0;
+    }
+    #projectNameGroup {
+      width: 100%;
+      height: 70px;
+      margin-bottom: 0;
+    }
+    
+    .save-button {
+      display: none;
+    }
+
+    #descriptionGroup {
+
+      textarea[disabled] {
+        font-weight: $w-light;
+        color: black;
+      }
+    }
+
+    #primaryBenefitsGroup, #secondaryBenefitsGroup {
+      margin-bottom: 0;
+      select {
+        font-weight: $w-medium;
+        color: black;
+        height: 24px;
+      }
+    }
+
     .status-bar {
       height: 10px;
       background: linear-gradient(to right, lighten($yellow, 20%), $yellow);
     }
   }
+
+
+
+
 
   .in-progress {
     .status-bar {

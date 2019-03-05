@@ -1,7 +1,7 @@
 <template>
 
-  <div :class="['project-view', {fullWidth: fullWidth}]">
-    <div class="each-card in-progress">
+  <div :class="['each-card', {fullWidth: fullWidth}]">
+    <div class="in-progress">
       <button v-b-toggle.inProgress @click="handleClick()">
         <span class="when-opened" aria-label="Close Settings">x</span> <span class="when-closed" aria-label="View Settings"></span>
       </button>

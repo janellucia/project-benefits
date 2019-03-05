@@ -5,60 +5,9 @@
         <div  class="sorting">
           <a href="#"><img alt="" src="../assets/images/sort-icon.png"> Newest to Oldest</a>
         </div>
-        <div class="each-card not-started">
-          <button v-b-modal.modalNotStarted class="settings" aria-label="settings"></button>
-          <div class="card-header">
-            <h3 class="project-name">Application Upgrade</h3>
-          </div>
-          <div class="card-body">
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div>
-              <h4>Project Benefits</h4>
-              <p class="benefit">Makes internal processes more efficient/effective</p>
-            </div>
-          </div>
-          <div class="card-footer">
-            <p class="status">Closure Survey Not Started</p>
-          </div>
-          <div class="status-bar"></div>
-        </div>
-
-        <div class="each-card in-progress">
-          <button v-b-toggle.inProgress class="settings"></button>
-          <div class="card-header">
-            <h3 class="project-name">Risk Analysis</h3>
-          </div>
-          <div class="card-body">
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div>
-              <h4>Project Benefits</h4>
-              <p class="benefit">Makes internal processes more efficient/effective</p>
-              <p class="benefit">Provides new internal capabilities</p>
-            </div>
-          </div>
-          <div class="card-footer">
-            <p class="status">Closure Survey In Progress</p>
-          </div>
-          <div class="status-bar"></div>
-        </div>
-
-        <div class="each-card closed">
-          <button class="settings"></button>
-          <div class="card-header">
-            <h3 class="project-name">Security Upgrade</h3>
-          </div>
-          <div class="card-body">
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div>
-              <h4>Project Benefits</h4>
-              <p class="benefit">Makes internal processes more efficient/effective</p>
-            </div>
-          </div>
-          <div class="card-footer">
-            <p class="status">Closure Survey Closed</p>
-          </div>
-          <div class="status-bar"></div>
-        </div>
+        <PvNotStarted/>
+        <PvInProgress/>
+        <PvClosed/>
 
         <div class="each-card not-started">
           <button v-b-modal.modalNotStarted class="settings" aria-label="settings"></button>
@@ -106,10 +55,17 @@
 </template>
 
 <script>
+
+import PvNotStarted from './PvNotStarted.vue'
+import PvInProgress from './PvInProgress.vue'
+import PvClosed from './PvClosed.vue'
+
 export default {
   name: 'Cards',
-  props: {
-    msg: String
+  components: {
+    PvNotStarted,
+    PvInProgress,
+    PvClosed
   }
 }
 </script>

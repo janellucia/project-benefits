@@ -34,7 +34,7 @@
         </b-form-group>
 
         <b-form-group id="primaryBenefitsGroup" label="Primary Project Benefit" label-for="primaryBenefits">
-          <b-form-select id="primaryBenefits" :options="options" v-model="primaryBenefit" />
+          <b-form-select id="primaryBenefits" placeholder="Select Benefit" :options="options" v-model="primaryBenefit" />
         </b-form-group>
 
         <b-form-group id="secondaryBenefitsGroup" label="Secondary Project Benefit (Optional)" label-for="secondaryBenefits">
@@ -59,7 +59,7 @@
         primaryBenefits: [],
         secondaryBenefit: '',
         secondaryBenefits: [],
-        options: [{ text: 'Select Benefit', value: null }, 'Increases sales/revenue dollars', 'Makes internal processes more efficient/effective', 'Creates new products or services', 'Improves customer experience', 'Provides new internal capabilities', 'Reduces risk/Improves regulatory compliance', 'Improves quality of business management'],
+        options: [{ text: 'Select Benefit' }, 'Increases sales/revenue dollars', 'Makes internal processes more efficient/effective', 'Creates new products or services', 'Improves customer experience', 'Provides new internal capabilities', 'Reduces risk/Improves regulatory compliance', 'Improves quality of business management'],
       }
     },
     methods: {
