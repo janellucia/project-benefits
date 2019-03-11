@@ -1,38 +1,245 @@
-.pv-header {
-  position: relative;
-  padding: 40px 0;
+.fullWidth.each-card {
 
-  h3 {
-    width: 100%;
-    margin: 30px 0;
-    color: $dark-grey;
-    font-family: $roboto;
-    font-size: 2.4rem;
-  }
+  .not-started {
+    //fullWidth Header initial styles (before edit)
+    .save-edit {
+      height: 44px;
+      width: 100px;
+      position: relative;
+      .save-button {
+        display: none;
+      }
+      .edit-icon {
+        &:before {
+          font-family: FontAwesome;
+          content: '\f040';
+          font-size: 1.5rem;
+          position: absolute;
+          top: 5px;
+          right: 0;
+          color: $bright-blue;
+        }
+      }
+      .trash {
+        &:before {
+          top: -5px;
+        }
+      }
+    }
+    .save-edit.editProject {
+      .edit-icon {
+        display: none;
+      }
+      .save-button {
+        display: inline;
+        background: $bright-blue;
+        color: white;
+        padding: 5px 20px;
 
-  .description {
-    width: 85%;
-  }
+        &:hover, &:focus {
+          background: lighten($bright-blue, 10%);
+        }
+      }
+      .trash {
+        height: 40px;
+      }
+    }
 
-  .benefit-title {
-    color: $light-grey;
-    font-size: 0.9rem;
-    margin-bottom: 0;
-    font-weight: $w-semibold;
-  }
+    .card-body {
 
-  .primary-benefit, .secondary-benefit {
-    margin-bottom: 10px;
-  }
+      #projectNameGroup {
+        width: 100%;
+        height: 130px;
 
-  .pv-status-bar {
-    position: absolute;
-    bottom: 0;
-    content: '';
-    width: 100%;
-    display: block;
-    height: 10px;
-    background: linear-gradient(to right, lighten($bright-blue, 20%), $bright-blue);
-    margin: 0 15px;
+        label {
+          width: 100%;
+          display: block !important;
+          opacity: 0 !important;
+        }
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 75px;
+          input {
+            width: 97%;
+            height: 50px;
+          }
+        }
+      }
+
+      .description-view {
+        width: 50%;
+
+        textarea {
+          height: 150px;
+        }
+      }
+    }
+
+
+    //fullWidth Header in Edit Mode
+    .card-body {
+
+      .showLabel, .showLabel#projectNameGroup {
+
+        #projectNameGroup__BV_label_ {
+          width: 100%;
+          display: block !important;
+          opacity: 1 !important;
+          margin-bottom: -5px;
+        }
+
+        #primaryBenefitsGroup, #secondaryBenefitsGroup {
+          margin-bottom: 20px;
+          select {
+            height: 40px;
+          }
+        }
+        .primary-title, .secondary-title {
+          display: none !important;
+        }
+        label{
+          display: block !important;
+          font-weight: $w-semibold;
+          color: $deep-grey;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .pv-body {
+      .pv-status-bar {
+        background: linear-gradient(to right, lighten($yellow, 20%), $yellow);
+      }
+
+      .start-survey-header {
+        margin-bottom: 30px;
+        h4 {
+          font-family: $montserrat;
+        }
+        p {
+          max-width: 1000px;
+        }
+      }
+
+      h5 {
+        font-family: $roboto;
+        font-weight: $w-regular;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      form {
+
+        label{
+          display: block !important;
+          font-weight: $w-regular;
+          color: $deep-grey;
+          margin: 20px 0 5px 0;
+        }
+
+        input::placeholder { 
+          font-weight: $w-light;
+          opacity: 0.8; 
+        }
+
+        #projectCostGroup {
+        }
+
+        #projectCostGroup__BV_label_:after, #projectSatisfactionGroup__BV_label_:after {
+          content: '(Optional)';
+          margin-left: 5px;
+          color: $medium-grey;
+          font-weight: $w-regular;
+        }
+
+        small {
+          font-size: 0.7rem;
+          margin: -5px 0 10px 0;
+        }
+
+        .custom-control-label {
+          font-size: 0.9rem;
+          span {
+            font-weight: $w-light;
+          }
+        }
+
+        #projectSatisfactionGroup {
+          div {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+        }
+        #projectSatisfactionGroup {
+          div {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+        }
+
+        p {
+          font-size: 0.8rem;
+          margin: 0;
+          span {
+            font-weight: $w-medium;
+          }
+        }
+      }
+
+      .start-survey-header {
+        h4 {
+          color: $dark-grey;
+        }
+      }
+    }
+
+
+    .btn-launch {
+      background: lighten($green, 5%);
+      position: relative;
+      padding-left: 0;
+      
+      &:focus, &:hover{
+        background: lighten($green, 10%);
+        color: white;
+        
+        &:before {
+          animation: bounceY 500ms infinite alternate;
+        }
+      }
+    }
+    
+    .btn-launch, .btn-cancel {
+      margin: 20px 10px 20px 0;
+    }
+
+    .questions-wrap {
+
+      .show-hide-questions {
+        color: $dark-grey;
+        width: 100%;
+        background: white;
+        position: relative;
+  
+        &:before, &:after {
+          content: '';
+          background: $deep-grey;
+          height: 1px;
+          width: 40%;
+          position: absolute;
+          top: 20px;
+        }
+        
+        &:before {
+          left: 0;
+        }
+  
+        &:after {
+          right: 0;
+        }
+      }
+    }
   }
 }

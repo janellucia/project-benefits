@@ -129,38 +129,45 @@
 
   .not-started {
 
-    label {
-      display: none !important;
-    }
-    input[disabled], textarea[disabled], select[disabled] {
-      background: white !important;
-      border: none;
-      padding: 0;
-    }
-    #projectNameGroup {
-      width: 100%;
-      height: 70px;
-      margin-bottom: 0;
-    }
-    
-    .save-button {
-      display: none;
-    }
+    .card-body {
 
-    #descriptionGroup {
-
-      textarea[disabled] {
-        font-weight: $w-light;
-        color: black;
+      label {
+        display: none !important;
       }
-    }
-
-    #primaryBenefitsGroup, #secondaryBenefitsGroup {
-      margin-bottom: 0;
-      select {
-        font-weight: $w-medium;
-        color: black;
-        height: 24px;
+      input[disabled], textarea[disabled], select[disabled] {
+        background: white !important;
+        border: none;
+        padding: 0;
+      }
+      #projectNameGroup {
+        width: 100%;
+        height: 70px;
+        margin-bottom: 0;
+  
+        .project-name input {
+          height: 31px;
+        }
+      }
+      
+      .save-button {
+        display: none;
+      }
+  
+      #descriptionGroup {
+  
+        textarea[disabled] {
+          font-weight: $w-light;
+          color: black;
+        }
+      }
+  
+      #primaryBenefitsGroup, #secondaryBenefitsGroup {
+        margin-bottom: 0;
+        select {
+          font-weight: $w-medium;
+          color: black;
+          height: 24px;
+        }
       }
     }
 
@@ -199,7 +206,7 @@
     outline: none;
 
     @media screen and (max-width: $screen-xs-max) {
-      height: 200px;;
+      height: 200px;
     }
 
     .fa-plus-circle {

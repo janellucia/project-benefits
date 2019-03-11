@@ -20,13 +20,15 @@
 
     .trash {
       position: relative;
+      height: 44px;
+      width: 44px;
 
       &:before {
         font-family: FontAwesome;
         content: '\f014';
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         position: absolute;
-        top: 5px;
+        top: 7px;
         right: 0px;
         z-index: 2;
         color: $bright-blue;
@@ -107,6 +109,12 @@
       
           &:hover, &:focus {
             background: darken($bright-blue, 5%);
+          }
+        }
+
+        .trash {
+          &:before {
+            top: 3px;
           }
         }
       }
@@ -278,151 +286,5 @@
       }
     }
   }
-
-  .not-started {
-
-    label {
-      display: block !important;
-      font-weight: $w-semibold;
-      color: $deep-grey;
-      margin-bottom: 5px;
-    }
-
-    #projectCostGroup__BV_label_:after, #projectSatisfactionGroup__BV_label_:after {
-      content: '(Optional)';
-      margin-left: 5px;
-      color: $medium-grey;
-      font-weight: $w-regular;
-    }
-
-    #projectSatisfactionGroup {
-      div {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-    .card-body {
-
-
-      #projectNameGroup {
-        width: 100%;
-        height: 130px;
-
-        label {
-          width: 100%;
-        }
-        div {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          height: 75px;
-          input {
-            width: 97%;
-          }
-          .save-button {
-            display: inline;
-            background: $bright-blue;
-            color: white;
-            height: 40px;
-            padding: 5px 20px;
-            margin-right: 50px;
-
-            &:hover, &:focus {
-              background: lighten($bright-blue, 10%);
-            }
-          }
-          .trash {
-            height: 40px;
-          }
-        }
-      }
-
-      .description-view {
-        width: 50%;
-
-        textarea {
-          height: 150px;
-        }
-      }
-
-      #primaryBenefitsGroup, #secondaryBenefitsGroup {
-        margin-bottom: 20px;
-        select {
-          height: 40px;
-        }
-      }
-    }
-
-
-
-
-    .pv-body {
-      .pv-status-bar {
-        background: linear-gradient(to right, lighten($yellow, 20%), $yellow);
-      }
-
-      form {
-        #projectSatisfactionGroup {
-          div {
-            display: flex;
-            flex-direction: column-reverse;
-          }
-        }
-      }
-
-      .results-header {
-        h4 {
-          color: $dark-grey;
-        }
-      }
-    }
-
-
-    .btn-launch {
-      background: lighten($green, 5%);
-      position: relative;
-      padding-left: 0;
-    
-      &:focus, &:hover{
-        background: lighten($green, 10%);
-        color: white;
-
-        &:before {
-          animation: bounceY 500ms infinite alternate;
-        }
-      }
-    }
-
-    .question-wrap {
-    }
-    
-    .show-hide-questions {
-      // border-top: 1px solid $deep-grey;
-      color: $dark-grey;
-      width: 100%;
-      background: white;
-      position: relative;
-
-      &:before, &:after {
-        content: '';
-        background: $deep-grey;
-        height: 1px;
-        width: 40%;
-        position: absolute;
-        top: 20px;
-      }
-      
-      &:before {
-        left: 0;
-      }
-
-      &:after {
-        right: 0;
-      }
-    }
-  }
-
-
-
 
 }

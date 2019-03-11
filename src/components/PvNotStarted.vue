@@ -1,31 +1,36 @@
 <template>
 
-  <div :class="['each-card', {fullWidth: fullWidth}]">
+  <div :class="['each-card', {fullWidth}]">
     <div class="not-started">
       <button v-b-toggle.notStarted @click="handleClick()">
-        <span class="when-opened" aria-label="Close Settings">x</span> <span class="when-closed" aria-label="View Settings"></span>
+        <span class="when-opened" aria-label="Close Settings" @click="handleClose()">x</span> <span class="when-closed" aria-label="View Settings"></span>
       </button>
       <b-form>
         <div class="card-body container">
 
-          <b-form-group id="projectNameGroup" label="Project Name" label-for="projectName">
+          <b-form-group id="projectNameGroup" label="Project Name" label-for="projectName" :class="{showLabel}">
             <h3 class="project-name"><b-form-input  id="projectName"  type="text" :placeholder="form.name" v-model="form.name" :disabled="disabled"/></h3>
-            <button class="trash" aria-label="delete project" @click="handleEdit()"></button>
-            <button class="save-button" @click="handleEdit()">Save</button>
+            <button :class="['save-edit', {editProject: editProject}]" @click="handleEdit()">
+              <span class="edit-icon" aria-label="edit project"></span>
+              <span class="save-button">Save</span>
+            </button>
             <button class="trash" aria-label="delete project"></button>
           </b-form-group>
 
           <div class="description-view">
-            <b-form-group id="descriptionGroup" label="Description" label-for="description">
+            <b-form-group id="descriptionGroup" label="Description" label-for="description" :class="{showLabel}">
               <b-form-textarea id="description" class="description" type="text" rows="4" :placeholder="form.description" v-model="description" :disabled="disabled"/>
             </b-form-group>
           </div>
 
-          <div class="benefit-view">
+          <div :class="['benefit-view', {showLabel}]">
+            <!-- <div class="benefit-view showLabel"> -->
             <h4 class="benefit-title">Project Benefits</h4>
+            <h4 class="primary-title">Primary Benefit</h4>
             <b-form-group id="primaryBenefitsGroup" label="Primary Project Benefit" label-for="primaryBenefits">
               <b-form-select id="primaryBenefits" :options="primaryOptions" v-model="primaryBenefit" :disabled="disabled"/>
             </b-form-group>
+            <h4 class="secondary-title">Secondary Benefit</h4>
             <b-form-group id="secondaryBenefitsGroup" label="Secondary Project Benefit (Optional)" label-for="secondaryBenefits">
               <b-form-select id="secondaryBenefits" :options="secondaryOptions" v-model="secondaryBenefit" :disabled="disabled"/>
             </b-form-group>
@@ -40,7 +45,7 @@
           <b-container >
             <b-row class="pv-body">
               <div class="pv-status-bar"></div>
-              <b-col md="12" class="results-header">
+              <b-col md="12" class="start-survey-header">
                 <h4>Start Closure Survey</h4>
                 <p>You’re almost there! Before you start, please take a moment to look over the survey questions at the bottom of the page. Then, decide if you would like to ask respondents about Project ROI or any custom questions.</p>
               </b-col>
@@ -50,13 +55,13 @@
                     <h5>Project Cost and ROI</h5>
 
                     <b-form-group id="projectCostGroup" label="Total Project Cost " label-for="projectCost">
-                      <b-form-input id="projectCost" type="text" label="Project Name" v-model="cost" />
+                      <b-form-input id="projectCost" type="text" placeholder="Enter total project cost" label="Project Name" v-model="cost" />
                     </b-form-group>
 
-                    <p><span>Please estimate a total cost for this project.</span> This estimate does NOT need to be precise. If you are unsure of the cost, consider the following estimation process: (# of working days X # of working staff X $500) + Direct Project Costs.</p>
+                    <p><span>Please estimate a total cost for this project.</span> This estimate does NOT need to be precise.<br>If you are unsure of the cost, consider the following estimation process: (# of working days X # of working staff X $500) + Direct Project Costs.</p>
 
                     <b-form-group id="askEstimateGroup" description="Note: This will share your cost estimate with Project Sponsors." v-model="form.askEstimate">
-                      <b-form-checkbox id="askEstimate" value="me">Ask Project Sponsors to estimate Project ROI (value relative to project cost)</b-form-checkbox>
+                      <b-form-checkbox id="askEstimate" value="me">Ask Project Sponsors to estimate Project ROI <span>(value relative to project cost)</span></b-form-checkbox>
                     </b-form-group>
 
                   </b-col>
@@ -100,8 +105,8 @@ export default {
     return {
       fullWidth: false,
       disabled: true,
-      displaySave: false,
-      displayEdit: false,
+      editProject: false,
+      showLabel: false,
       form: {
         name: 'Application Upgrade',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -117,12 +122,17 @@ export default {
   },
   methods: {
     handleClick: function() {
-      this.fullWidth = !this.fullWidth,
-      this.disabled = !this.disabled
+      this.fullWidth = !this.fullWidth
     },
     handleEdit: function() {
-      this.displaySave = !this.displaySave
-      this.displayEdit = !this.displayEdit
+      this.disabled = !this.disabled,
+      this.editProject = !this.editProject
+      this.showLabel = !this.showLabel
+    },
+    handleClose: function() {
+      this.disabled = true,
+      this.editProject = false
+
     }
   }
 }
