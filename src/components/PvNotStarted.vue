@@ -55,6 +55,7 @@
                     <h5>Project Cost and ROI</h5>
 
                     <b-form-group id="projectCostGroup" label="Total Project Cost " label-for="projectCost">
+                      <span class="currency">$</span>
                       <b-form-input id="projectCost" type="text" placeholder="Enter total project cost" label="Project Name" />
                     </b-form-group>
 
@@ -85,6 +86,9 @@
               <b-col md="12">
                 <button class="show-hide-questions">Hide Survey Questions</button>
               </b-col>
+              <b-col md="12">
+                <SurveyQuestions/>
+              </b-col>
               <b-col md="12" visible id="surveyQuestions">
                 <button class="btn btn-launch">Launch Survey</button>
                 <button class="btn btn-cancel">Cancel</button>
@@ -99,8 +103,13 @@
 
 <script>
 
+import SurveyQuestions from './SurveyQuestions.vue'
+
 export default {
   name: 'PvNotStarted',
+  components: {
+    SurveyQuestions
+  },
   data() {
     description: ''
     return {
@@ -124,6 +133,8 @@ export default {
   methods: {
     handleClick: function() {
       this.fullWidth = !this.fullWidth
+      this.editProject = false
+      this.showLabel = false
     },
     handleEdit: function() {
       this.disabled = !this.disabled,

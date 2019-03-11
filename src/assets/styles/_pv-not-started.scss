@@ -117,6 +117,7 @@
         margin-bottom: 30px;
         h4 {
           font-family: $montserrat;
+          color: $dark-grey;
         }
         p {
           max-width: 1000px;
@@ -145,6 +146,17 @@
         }
 
         #projectCostGroup {
+          position: relative;
+
+          input {
+            padding: 0.375rem 1.55rem;
+          }
+          .currency {
+            position: absolute;
+            top: 36px;
+            left: 0.65rem;
+            z-index: 99;
+          }
         }
 
         #projectCostGroup__BV_label_:after, #projectSatisfactionGroup__BV_label_:after {
@@ -163,6 +175,10 @@
           font-size: 0.9rem;
           span {
             font-weight: $w-light;
+          }
+
+          &:before, &:after {
+            top: 0.17rem;
           }
         }
 
@@ -186,13 +202,22 @@
             font-weight: $w-medium;
           }
         }
-      }
 
-      .start-survey-header {
-        h4 {
-          color: $dark-grey;
+        .add-another-question {
+          color: $medium-grey;
+          font-weight: $w-medium;
+
+          &:before {
+            // content: '\f067';
+            // font-family: FontAwesome;
+            content: '+';
+            font-size: 1.5rem;
+            line-height: 0.9;
+            margin-right: 5px;
+          }
         }
       }
+
     }
 
 

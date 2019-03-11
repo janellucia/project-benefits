@@ -26,3 +26,9 @@ button, .btn {
   border-radius: 0;
   padding: 10px 0;
 }
+
+input, textarea, select, label:before {
+  border-radius: 0 !important;
+  // border: 2px solid $pale-grey !important;
+  // border: 1px solid $pale-grey !important;
+}
