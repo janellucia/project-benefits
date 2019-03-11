@@ -19,7 +19,7 @@
 
           <div class="description-view">
             <b-form-group id="descriptionGroup" label="Description" label-for="description" :class="{showLabel}">
-              <b-form-textarea id="description" class="description" type="text" rows="4" :placeholder="form.description" v-model="description" :disabled="disabled"/>
+              <b-form-textarea id="description" class="description" type="text" rows="4" :placeholder="form.description" :disabled="disabled"/>
             </b-form-group>
           </div>
 
@@ -28,11 +28,11 @@
             <h4 class="benefit-title">Project Benefits</h4>
             <h4 class="primary-title">Primary Benefit</h4>
             <b-form-group id="primaryBenefitsGroup" label="Primary Project Benefit" label-for="primaryBenefits">
-              <b-form-select id="primaryBenefits" :options="primaryOptions" v-model="primaryBenefit" :disabled="disabled"/>
+              <b-form-select id="primaryBenefits" :options="primaryOptions" :disabled="disabled"/>
             </b-form-group>
             <h4 class="secondary-title">Secondary Benefit</h4>
             <b-form-group id="secondaryBenefitsGroup" label="Secondary Project Benefit (Optional)" label-for="secondaryBenefits">
-              <b-form-select id="secondaryBenefits" :options="secondaryOptions" v-model="secondaryBenefit" :disabled="disabled"/>
+              <b-form-select id="secondaryBenefits" :options="secondaryOptions" :disabled="disabled"/>
             </b-form-group>
           </div>
         </div>
@@ -55,7 +55,7 @@
                     <h5>Project Cost and ROI</h5>
 
                     <b-form-group id="projectCostGroup" label="Total Project Cost " label-for="projectCost">
-                      <b-form-input id="projectCost" type="text" placeholder="Enter total project cost" label="Project Name" v-model="cost" />
+                      <b-form-input id="projectCost" type="text" placeholder="Enter total project cost" label="Project Name" />
                     </b-form-group>
 
                     <p><span>Please estimate a total cost for this project.</span> This estimate does NOT need to be precise.<br>If you are unsure of the cost, consider the following estimation process: (# of working days X # of working staff X $500) + Direct Project Costs.</p>
@@ -70,7 +70,7 @@
                     <p>Please enter up to X custom satisfaction questions, which will be introduced with the following formatting:</p>
 
                     <b-form-group id="projectSatisfactionGroup" label="How satisfied are you with the following?" description="(User will choose: Very Satisfied, Somewhat Satisfied, Somewhat Dissatisfied, Very Dissatisfied)" label-for="projectSatisfaction">
-                      <b-form-input id="projectSatisfaction" placeholder="Enter custom satisfaction factor, eg. creates new products or services" v-model="satisfaction" />
+                      <b-form-input id="projectSatisfaction" placeholder="Enter custom satisfaction factor, eg. creates new products or services" />
                     </b-form-group>
 
                     <a href="#" class="add-another-question">Add Question</a>
@@ -102,6 +102,7 @@
 export default {
   name: 'PvNotStarted',
   data() {
+    description: ''
     return {
       fullWidth: false,
       disabled: true,
@@ -117,7 +118,7 @@ export default {
       },
       primaryOptions: [{ text: 'Makes internal processes more efficient/effective'}, 'Increases sales/revenue dollars', 'Makes internal processes more efficient/effective', 'Creates new products or services', 'Improves customer experience', 'Provides new internal capabilities', 'Reduces risk/Improves regulatory compliance', 'Improves quality of business management'],
       secondaryOptions: [{ text: 'Increases sales/revenue dollars'}, 'Increases sales/revenue dollars', 'Makes internal processes more efficient/effective', 'Creates new products or services', 'Improves customer experience', 'Provides new internal capabilities', 'Reduces risk/Improves regulatory compliance', 'Improves quality of business management'],
-      show: true
+      show: true,
     }
   },
   methods: {
