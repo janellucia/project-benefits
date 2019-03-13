@@ -111,7 +111,6 @@ export default {
     SurveyQuestions
   },
   data() {
-    description: ''
     return {
       fullWidth: false,
       disabled: true,
@@ -149,3 +148,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+@import '../assets/styles/_variables.scss';
+
+
+
+
+</style>
