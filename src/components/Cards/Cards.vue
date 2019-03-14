@@ -3,11 +3,11 @@
     <b-row>
       <b-col cols="12" class="cards-wrapper">
         <div  class="sorting">
-          <a href="#"><img alt="" src="../assets/images/sort-icon.png"> Newest to Oldest</a>
+          <a href="#"><img alt="" src="../../assets/images/sort-icon.png"> Newest to Oldest</a>
         </div>
-        <PvNotStarted/>
-        <PvInProgress/>
-        <PvClosed/>
+        <NotStarted/>
+        <InProgress/>
+        <Closed/>
 
         <div class="each-card not-started">
           <button v-b-modal.modalNotStarted class="settings" aria-label="settings"></button>
@@ -56,16 +56,21 @@
 
 <script>
 
-import PvNotStarted from './PvNotStarted.vue'
-import PvInProgress from './PvInProgress.vue'
-import PvClosed from './PvClosed.vue'
+import NotStarted from './NotStarted/NotStarted.vue'
+import InProgress from './InProgress/InProgress.vue'
+import Closed from './Closed/Closed.vue'
 
 export default {
   name: 'Cards',
   components: {
-    PvNotStarted,
-    PvInProgress,
-    PvClosed
+    NotStarted,
+    InProgress,
+    Closed
   }
 }
 </script>
+
+
+<style lang="scss" scoped>
+@import './Cards.scss';
+</style>

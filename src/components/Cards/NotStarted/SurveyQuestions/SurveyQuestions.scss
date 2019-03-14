@@ -1,0 +1,58 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+@import '../../../../assets/styles/_variables.scss';
+
+
+.survey-questions {
+  background: red;
+  .card {
+    border: none;
+    .nav-tabs {
+      .nav-item {
+        padding: 20px 0;
+        
+        .nav-link {
+          padding: 0;
+          // display: inline;
+          border: none;
+          color: $dark-grey;
+          // text-align: right;
+          float: right;
+        }
+        .nav-link.active {
+          border-bottom: 5px solid $bright-blue;
+        }
+      }
+    }
+    .tab-content {
+      position: relative;
+      z-index: 1;
+      background: white;
+      // box-shadow: 0 14px 28px rgba(0,0,0,0), 0 10px 10px rgba(0,0,0,1);
+      // box-shadow: 0 0 100px rgba(0,0,0,0.1);
+
+      // background: white;
+      // border-left: solid 5px transparent; 
+      // border-right: solid 5px transparent; 
+      // border-bottom: solid 5px #fff;
+      // border-top: solid 5px #fff;
+      // filter: drop-shadow(0 0 30px #333);
+      box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 12px 0 17px -4px rgba(0, 0, 0, 0.2), -12px 0 17px -4px rgba(0, 0, 0, 0.2);
+          // &:before {
+          //   content: '';
+          //   position: absolute;
+          //   // display: none;
+          //   width: 5px;
+          //   height: 600px;
+          //   top: 0px;
+          //   left: 0px;
+          //   right: 0px;
+          //   bottom: 0px;
+          //   z-index: -1;
+          //   background: linear-gradient(to bottom, white, rgba(0, 0, 0, 0.3), white);
+          //   filter: blur(15px);
+          // }
+    }
+
+  }
+}

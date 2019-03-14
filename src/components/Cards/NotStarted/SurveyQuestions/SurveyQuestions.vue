@@ -78,44 +78,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/bootstrap-vue/src/index.scss';
-@import '../assets/styles/_variables.scss';
-
-  .survey-questions {
-    .card {
-      border: none;
-      .nav-tabs {
-        .nav-item {
-          padding: 10px 0;
-          .nav-link {
-            display: inline;
-            border: none;
-            color: $dark-grey;
-            text-align: right;
-            
-          }
-          .nav-link.active {
-            border-bottom: 2px solid $bright-blue;
-          }
-        }
-      }
-      .tab-content {
-        // box-shadow: 0 14px 28px rgba(0,0,0,0), 0 10px 10px rgba(0,0,0,1);
-        // box-shadow: 0 0 100px rgba(0,0,0,0.1);
-
-        // background: white;
-        // border-left: solid 5px transparent; 
-        // border-right: solid 5px transparent; 
-        // border-bottom: solid 5px #fff;
-        // border-top: solid 5px #fff;
-        // filter: drop-shadow(0 0 30px #333);
-        box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 15px -4px rgba(0, 0, 0, 0.2);
-      }
-
-    }
-  }
-
-
-
+@import './SurveyQuestions.scss';
 </style>

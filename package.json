@@ -13,10 +13,13 @@
     "@fortawesome/vue-fontawesome": "^0.1.5",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.13",
+    "css-loader": "^0.28.11",
+    "file-loader": "^3.0.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
     "vue": "^2.6.6",
-    "vue-awesome": "^3.4.0"
+    "vue-awesome": "^3.4.0",
+    "vue-style-loader": "^4.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",

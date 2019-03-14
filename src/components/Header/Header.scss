@@ -1,0 +1,82 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+@import '../../assets/styles/_variables.scss';
+
+.my-projects-header {
+  background: black;
+  background-image: url("../../assets/images/Subhead-bkg.png");
+  background-size: cover;
+  padding: 70px 0;
+
+  h2 {
+    color: white;
+    font-size: 2.125em;
+    font-family: "Exo", sans-serif;
+    font-weight: $w-bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: white;
+    font-weight: $w-extralight;
+    a {
+      font-weight: $w-regular;
+      margin-left: 7px;
+    }
+  }
+
+  .add-project-button {
+    background: $green;
+    border: none;
+    color: white;
+    position: relative;
+    padding: 10px 40px 10px 85px;
+    margin: 20px 0;
+    border: none;
+    font-weight: $w-bold;
+    font-size: 1.1rem;
+    transition: all 0.1s;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05), 0 0 10px rgba(0,0,0,0.1);
+
+    @media screen and (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+
+    &::before {
+      content: ' ';
+      background-color: darken($green, 7%);
+      width: 45px;
+      height: 100%;
+      display: block;
+      z-index: 1;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      font-family: FontAwesome;
+      content: '\f067';
+      color: white;
+      position: absolute;
+      width: 45px;
+      top: 11px;
+      left: 0;
+      z-index: 2;
+      font-size: 1.2rem;
+      transition: all 0.05s;
+    }
+
+    &:hover, &:focus {
+      &:before {
+        background: $green;
+        border-right: 1px solid rgba(white, 0.1);
+      }
+
+      &:after {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

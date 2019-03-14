@@ -111,3 +111,11 @@ export default {
   }
 }
 </script>
+
+
+<style lang="scss" scoped>
+
+@import './Closed.scss';
+
+
+</style>

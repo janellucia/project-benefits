@@ -103,7 +103,7 @@
 
 <script>
 
-import SurveyQuestions from './SurveyQuestions.vue'
+import SurveyQuestions from './SurveyQuestions/SurveyQuestions.vue'
 
 export default {
   name: 'PvNotStarted',
@@ -149,12 +149,10 @@ export default {
 }
 </script>
 
+
 <style lang="scss" scoped>
-@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/bootstrap-vue/src/index.scss';
-@import '../assets/styles/_variables.scss';
 
-
+@import './NotStarted.scss';
 
 
 </style>

@@ -97,3 +97,8 @@
     }
   }
 </script>
+
+
+<style lang="scss" scoped>
+@import './Modal.scss';
+</style>

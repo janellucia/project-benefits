@@ -126,3 +126,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+@import './InProgress.scss';
+
+
+</style>

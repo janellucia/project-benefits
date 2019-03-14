@@ -8,10 +8,9 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Cards from './components/Cards.vue'
-import Modal from './components/Modal.vue'
-import SurveyQuestions from './components/SurveyQuestions.vue'
+import Header from './components/Header/Header.vue'
+import Cards from './components/Cards/Cards.vue'
+import Modal from './components/Modal/Modal.vue'
 
 
 export default {
@@ -20,7 +19,6 @@ export default {
     Header,
     Cards,
     Modal,
-    SurveyQuestions
   }
 }
 
